@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продуктовая страница</title>
+    <link rel="stylesheet" href="./styles.css"> <!-- Основной файл стилей -->
+    <link rel="stylesheet" href="./media-queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Основной баннер с видео-кнопкой -->
+    <section class="banner">
+        <img src="./assets/icons/конфеты.jpeg" alt="Баннер" class="banner__image">
+        <button class="banner__button" onclick="openVideoPopup()">Смотреть видео</button>
+    </section>
+	
+	 <main class="card__container">
+		<div class="card card--pea">
+			<h3 class="card__title">Горох в стручках, 1 кг</h3>
+			<div class="card__actions">
+				<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+				<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+			</div>
+			<div class="card__info">
+				<div class="card__badge-wrapper">
+					<div class="card__sale">- 29%</div>
+					<p class="card__daily">Товар дня</p>
+				</div>
+				<div class="card__details">
+					<p class="card__price">570 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+		<div class="card__column-layout">
+		<div class="card card--dove">
+			<h3 class="card__title">Голубика лесная, 200 г</h3>
+			<div class="card__actions">
+				<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+				<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+			</div>
+			<div class="card__info">
+				<div class="card__badge-wrapper">
+					<div class="card__sale">- 31%</div>
+					<p class="card__daily">Распродажа</p>
+				</div>
+				<div class="card__details">
+					<p class="card__price">140 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="card card--carrot">
+			<h3 class="card__title">Морковь мытая, 1 кг</h3>
+			<div class="card__actions">
+				<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+				<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+			</div>
+			<div class="card__info">
+				<div class="card__badge-wrapper">
+					<!-- <div class="card__sale">- 29%</div> -->
+					<p class="card__daily">Хит</p>
+				</div>
+				<div class="card__details">
+					<p class="card__price">140 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+</div>	
+		<div class="card card--popcorn">
+			<div class="card__content">
+				<div class="card__badge-wrapper">
+					<p class="card__daily">Товар дня</p>
+					<div class="card__sale">- 29%</div>
+				</div>
+				<div class="card__actions">
+					<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+					<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+				</div>
+			</div>
+				<div class="card__details">
+					<h4 class="card__title">Попкорн солёный,для СВЧ-печи, 120 г</h4> 
+					<p class="card__price">160 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		<div class="card card--icecream">
+			<div class="card__content">
+				<div class="card__badge-wrapper">
+					<p class="card__daily">Хит</p>
+				</div>
+				<div class="card__actions">
+					<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+					<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+				</div>
+			</div>
+				<div class="card__details">
+					<h4 class="card__title">Эскимо с малиной,150 г</h4> 
+					<p class="card__price">190 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+		<!--  -->
+
+    <div class="form-popup" id="formPopup">
+        <div class="form-popup__content">
+            <form class="form-popup__form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" class="form-popup__input" required>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" class="form-popup__input" required>
+                <button type="submit" class="form-popup__submit">Отправить</button>
+                <button type="button" class="form-popup__close" onclick="closeFormPopup()">Закрыть</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Попап для видео -->
+    <div class="video-popup" id="videoPopup">
+        <div class="video-popup__content">
+            <iframe class="video-popup__iframe" src="" allow="autoplay" allowfullscreen></iframe>
+            <button class="video-popup__close" onclick="closeVideoPopup()">Закрыть</button>
+        </div>
+    </div>
+	 </main>
+<!-- TEST -->
+ <div class="contikk">
+	 <div class="cartochka">
+		<div class="img__section">
+			<img src="./assets/icons/попкорн.jpeg" alt="">
+		</div>
+		<div class="details">
+			<h4 class="title">Попкорн солёный,для СВЧ-печи, 120 г</h4> 
+					<p class="price">190 ₽</p>
+					<button class="butik">Оставить заявку</button>
+		</div>
+	 </div>
+	 <div class="conter">
+		<div class="test1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus vitae neque voluptate distinctio sed quae minus assumenda deleniti enim ipsa eveniet perspiciatis repellat cum, ratione rem dicta nisi laboriosam quasi.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo earum eaque maxime doloremque culpa quod aliquid aliquam ducimus laudantium repellat mollitia placeat, minus quibusdam praesentium doloribus consequuntur exercitationem cupiditate voluptatum.
+		</div>
+		<div class="tester">
+			<div class="tester1">5</div>
+			<div class="tester2">6</div>
+		</div>
+		<div class="test2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, magni? Vitae esse voluptatum molestiae animi temporibus. Ab dolor quisquam rerum nulla, ea possimus, at nobis delectus dicta eius sapiente quaerat?</div>
+		<div class="test3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora magni sunt facere ipsum, reprehenderit quia aspernatur optio quod repudiandae eos. Numquam amet neque voluptas, non perferendis tempora omnis repudiandae temporibus?</div>
+	</div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
